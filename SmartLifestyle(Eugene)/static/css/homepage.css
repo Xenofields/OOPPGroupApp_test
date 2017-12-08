@@ -1,0 +1,121 @@
+body{
+	background-image: url("https://cdn.discordapp.com/attachments/320223667508346881/376658456922554378/login_page_background.jpg");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+	font-family: Verdana, Sans-serif;
+}
+@font-face {
+    font-family: CHAWP;
+    src: url(chawp.otf);
+}
+/* home page*/
+
+div.middle{
+    text-align: center;
+	font-size: 30px;
+	position: absolute;
+    top: 33%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.des{
+	text-align: center;
+	font-family: Verdana, Sans-serif;
+	background-color:orange;
+	padding: 0;
+	position: absolute;
+	width:99%;
+	bottom:-100px;
+}
+
+div.des p{
+	font-size: 20px;
+}
+div.des h2{
+	font-size: 30px;
+}
+.welcome{
+	text-align: center;
+	font-family: Verdana, Sans-serif;
+	position: absolute;
+	top: 9%;
+    left: 38.2%;
+	font-size:80px;
+}
+
+
+hr{
+    border: 1px solid black;
+    outline-style: solid;
+    outline-color: red;
+}
+
+.app {
+    border: 2px solid #4CAF50;
+	border-radius: 4px;
+	padding: 15px 45px;
+	background-color:#cc470d;
+	text-align: center;
+	color:white;
+	position: absolute;
+    top: 60%;
+    left: 44%;
+	font-size:20px;
+	width: 200px;
+	font-weight: bold;
+	transition: all 0.5s;
+}
+.app span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.app:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+	background-color:orange;
+	color:black;
+	cursor:pointer;
+}
+.app span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 20px;
+  right: -20px;
+  transition: 0.5s;
+}
+.app:hover span {
+  padding-right: 25px;
+}
+
+.app:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+.arrow{	
+	position:absolute;
+	top: 35%;
+    left: 29.5%;
+	font-family:CHAWP;
+	font-size: 50px;
+	text-align:center;
+	-webkit-text-stroke: 1px  green;
+   color:  #e15a1f;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+.arrow span{
+	color:white;
+	font-size:63px;
+}
+/* Help Bot*/
+
+
+
+

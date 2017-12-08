@@ -1,0 +1,162 @@
+
+div.set ul{
+	background-color: #ffffff;
+	border-radius: 4px;
+	position:absolute;
+	height:auto;
+    top: 10%;
+    left: 12%;
+	border: 2px solid black;
+	padding:12px;
+	
+}
+div.set li{
+	font-weight: bold;
+	margin: 5%;
+	display: inline;
+	padding-bottom:10px;
+	float:center;
+}
+div.set li a{
+    color: black;
+    background-color:#00BFFF;
+	text-decoration: none;
+    text-align: center;
+	border:2px solid black;
+	display:block;
+    padding: 19px 16px;
+	position:center;
+	transition: all 0.4s ease 0s;
+}
+div.set li a:hover {
+    background-color: #FF4500;
+	color:white;
+}
+
+div.profile, .note, .utility{
+	background-color: #ffffff;
+	border-radius: 4px;
+	position:absolute;
+	height:82%;
+    top: 11.7%;
+    left: 25%;
+	border: 2px solid black;
+	width: 65%;
+	padding:12px;
+}
+div.set .active2{
+    background-color: #32CD32;
+}
+
+/* profile page*/
+.subprofile{
+	padding-top:40px;
+}
+input[type=text], input[type=password], input[type=email], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=text]:focus {
+    border: 3px solid #555;
+}
+label{
+    display:inline-block;
+    width:100px;
+}
+.button2{
+	background-color: #4CAF50;
+	border-radius: 4px;
+	padding:12px;
+	transition: all 0.3s ease 0s;
+	color:white;
+}
+.button2:hover{
+	background-color:#e15a1f;
+	color:white;
+	cursor:pointer;
+}
+.reset{
+	background-color: #ff9800;
+	color:white;
+	border-radius: 4px;
+	padding:12px;
+	transition: all 0.3s ease 0s;
+}
+.reset:hover{
+	background-color:#e15a1f;
+	color:white;
+	cursor:pointer;
+}
+.info{
+	font-weight:bold;
+}
+
+/* notification page*/
+hr{
+	border: 1px solid black;
+    outline-style: solid;
+    outline-color: red;
+	width:30%;
+}
+.heading{
+	text-align:center;
+}
+.subnote{
+	font-size:18px;
+	position:absolute;
+	top:12%;
+	left:4%;
+}
+/* utility page*/
+.mid{
+	list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.mid li{
+	display: block;
+	text-align:left;
+    float: left;
+}
+.mid img{
+	margin: 0;
+    padding-left:125px;
+}
+.water img, .electricity img{
+	padding-top:15px;
+}
+
+h2{
+	float:right;
+	font-size:30px;
+	text-align:left;
+}
+.gas h2{
+	padding-right:155px;
+}
+.water h2{
+	padding-right:35px;
+}
+.electricity h2{
+	padding-right:10px;
+}
+.words {
+	font-size:18px;
+	padding-left:150px;
+}
+.usage{
+	font-size:40px;
+	font-weight:bold;
+	color:green;
+}
+.amount{
+	font-size:30px;
+	font-weight:bold;
+	color:green;
+}
+
