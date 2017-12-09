@@ -14,7 +14,12 @@ def appPage():
 @app.route('/utility')
 def utilityPage():
     return render_template('UtilityPage.html')
-
+@app.route('/myprofile')
+def profilePage():
+    return render_template('Profilepage.html')
+@app.route('/notifications')
+def notePage():
+    return render_template('Notepage.html')
 if __name__ == '__main__':
     app.run(debug=True)
 

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="../static/css/settings.css">
+<link rel="stylesheet" href="../static/css/navbar.css">
+
+<title>Smart Lifestyle - My Profile</title>
+</head>
+<body>
+
+<!-- nav bar -->
+<img style="width:220px; height:80px;" src="../static/images/websitelogo.png" class="img"/>
+<div id='cssmenu'>
+<ul>
+
+   <li><a href='/home'><span>HOME</span></a></li>
+   <li class='active has-sub'><a href='/application'><span>APPLICATIONS</span></a>
+      <ul>
+         <li class='has-sub'><a href='Haze.html'><span>Haze Warning</span></a>
+         </li>
+         <li class='has-sub'><a href='OOPP1.html'><span>Family Bonding</span></a>
+         </li>
+		 <li class='has-sub'><a href='Security_Functions'><span>Security</span></a>
+         </li>
+		 <li class='has-sub'><a href='#'><span>Household Chores</span></a>
+         </li>
+      </ul>
+   </li>
+   <li class='active has-sub'><a href='#' id="active"><span>SETTINGS</span></a>
+		<ul>
+			<li class='has-sub'><a href='/myprofile'><span>My Profile</span></a>
+			</li>
+			<li class='has-sub'><a href='/notifications' id="active"><span>Notifications</span></a>
+			</li>
+			<li class='has-sub'><a href='/utility'><span>Utility Charges</span></a>
+			</li>
+		</ul>
+   </li>
+   <li class='last'><a href='#'><span>ABOUT</span></a></li>
+</ul>
+</div>
+
+<div class="set">
+<ul>
+<li><a href="/myprofile">My Profile</a></li>
+<li><a href="/notifications" class="active2">Notifications</a></li>
+<li><a href="/utility">Utility Charges</a></li>
+</ul>
+</div>
+<div class="note">
+<h1 class='heading'>Notifications</h1><hr>
+
+<div class='subnote'>
+	<div class="haze_note">
+		<form>
+			<h3>Haze:</h3>
+			<p>I would like to recieve notifications about any haze functions via: </p>
+			<input type="radio" name="Hazemsg" value="email">My Email<br>
+			<input type="radio" name="Hazemsg" value="phone">Phone(message)<br>
+			<input type="radio" name="Hazemsg" value="no">Disable(no notifications)
+		</form>
+	</div>
+	<div class="security_note">
+		<form>
+			<h3>Security:</h3>
+			<p>I would like to recieve notifications if any suspicious motions is detected via: </p>
+			<input type="radio" name="Hazemsg" value="email">My Email<br>
+			<input type="radio" name="Hazemsg" value="phone">Phone(message)<br>
+			<input type="radio" name="Hazemsg" value="no">Disable(no notifications)
+		</form>
+		<form>
+			<p>I would like to recieve notifications if any devices are switched on via: </p>
+			<input type="radio" name="Hazemsg" value="email">My Email<br>
+			<input type="radio" name="Hazemsg" value="phone">Phone(message)<br>
+			<input type="radio" name="Hazemsg" value="no">Disable(no notifications)
+		</form>
+	</div>	
+</div>
+
+

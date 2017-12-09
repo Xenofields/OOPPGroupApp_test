@@ -44,13 +44,14 @@ div.profile, .note, .utility{
 	width: 65%;
 	padding:12px;
 }
+
 div.set .active2{
     background-color: #32CD32;
 }
 
 /* profile page*/
 .subprofile{
-	padding-top:40px;
+	padding-top:1%;
 }
 input[type=text], input[type=password], input[type=email], select {
     width: 100%;
