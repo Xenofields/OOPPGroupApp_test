@@ -1,9 +1,4 @@
-body{
-	background-image: url("https://cdn.discordapp.com/attachments/320223667508346881/376658456922554378/login_page_background.jpg");
-	background-repeat: no-repeat;
-    background-attachment: fixed;
-	font-family: Verdana, Sans-serif;
-}
+
 @font-face {
     font-family: CHAWP;
     src: url(chawp.otf);
