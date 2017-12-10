@@ -4,6 +4,12 @@ body{
     background-attachment: fixed;
 	font-family: Verdana, Sans-serif;
 }
+.logo{
+	position:sticky;
+	top: 0;
+	z-index:99;
+	background-color:#ffffff;
+}
 #cssmenu,
 #cssmenu ul,
 #cssmenu li,
@@ -25,9 +31,6 @@ body{
   z-index:99;
   top:1.5%;
   left:12%
-}
-.img{
-	position:fixed;
 }
 #cssmenu > ul {
   list-style: inside none;

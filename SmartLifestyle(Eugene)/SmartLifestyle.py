@@ -20,6 +20,9 @@ def profilePage():
 @app.route('/notifications')
 def notePage():
     return render_template('Notepage.html')
+@app.route('/household_chores')
+def choresPage():
+    return render_template('Chores.html')
 if __name__ == '__main__':
     app.run(debug=True)
 
