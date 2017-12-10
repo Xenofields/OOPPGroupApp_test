@@ -1,14 +1,21 @@
-
+.logo{
+	position:sticky;
+	top: 0;
+	z-index:99;
+	background-color:#ffffff;
+    width:220px;
+    height:80px;
+}
 div.set ul{
 	background-color: #ffffff;
 	border-radius: 4px;
-	position:absolute;
+	position:relative;
 	height:auto;
-    top: 10%;
-    left: 12%;
+	top:4px;
+    left: 11.65%;
 	border: 2px solid black;
 	padding:12px;
-	
+	width:9%;
 }
 div.set li{
 	font-weight: bold;
@@ -54,13 +61,16 @@ div.set .active2{
 	padding-top:1%;
 }
 input[type=text], input[type=password], input[type=email], select {
-    width: 100%;
+    width: 40%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+	bottom:4.5px;
+	position:relative;
+	font-size:20px
 }
 input[type=text]:focus {
     border: 3px solid #555;
@@ -96,8 +106,13 @@ label{
 	color:white;
 	cursor:pointer;
 }
+
 .info{
 	font-weight:bold;
+	background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;   
+	padding: 10px 16px;
+
 }
 
 /* notification page*/

@@ -33,9 +33,7 @@ div.des h2{
 .welcome{
 	text-align: center;
 	font-family: Verdana, Sans-serif;
-	position: absolute;
-	top: 9%;
-    left: 38.2%;
+	position: relative;
 	font-size:80px;
 }
 

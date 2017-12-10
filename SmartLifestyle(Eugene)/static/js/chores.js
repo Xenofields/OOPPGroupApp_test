@@ -25,4 +25,20 @@ window.onload = function(){
 			modal.style.display = "none";
 		}
 	}
+	
+var slide=document.getElementById("switch");
+var auto = document.getElementById("test2");
+var manual=document.getElementById("test");
+auto.style.display = "none"
+slide.onclick=function(){
+    if (auto.style.display === "none") {
+        auto.style.display = "block";
+		manual.style.display = "none";
+    } else {
+        auto.style.display = "none";
+		manual.style.display = "block";
+    }
+}
+
+
 }

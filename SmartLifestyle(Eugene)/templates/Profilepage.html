@@ -10,7 +10,7 @@
 <body>
 
 <!-- nav bar -->
-<img style="width:220px; height:80px;" src="../static/images/websitelogo.png" class="logo" id="logo"/>
+<img src="../static/images/websitelogo.png" class="logo" id="logo"/>
 <div id='cssmenu'>
 <ul>
 
@@ -58,21 +58,30 @@
     <label for="password">Password:</label>
     <input type="password" name="password" id="password" value="PASSWORD" disabled >
     <input type="button" class="button2" value="Change Password">
+
     <p class="info">&#9432; Ensure that you do not give your password out to anyone!</p>
+
     <label for="email">E-mail:</label>
     <input type="email" name="email" id="email" required>
+
     <p class="info">&#9432; Please ensure that this is your current email as notifications will be sent to it!</p>
+
     <label for="mobileno">Mobile Number:</label>
     <input type="text" name="mobileno" id="mobileno" required>
+
     <p class="info">&#9432; Please ensure that this is your current phone number as notifications will be sent to it!</p>
+
     <h3>House Address</h3>
     <label for="streetname">Street Name:</label>
     <input type="text" name="streetname" id="streetname" required>
+	<br>
     <label for="unitno">Unit Number:</label>
     <input type="text" name="unitno" id="unitno" required>
     <label for="postalcode">Postal Code:</label>
     <input type="text" name="postalcode" id="postalcode" required>
-    <p class="info">&#9432; House address is needed in order to display your utility charges!</p>
+    <div class="infobox">
+        <p class="info">&#9432; House address is needed in order to display your utility charges!</p>
+    </div>
      <br><br>
     <input type="button" class="button2" value="Save Changes">
     <input type="reset" class="reset" value="Revert Changes">
