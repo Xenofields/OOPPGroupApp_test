@@ -8,18 +8,50 @@
 <script src="../static/js/chores.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-function valueChanged()
-{
-	
-    if($('.change').is(":checked")){
-        $("#test2").show();
-		$(".test").hide();
+function valueChanged(){	
+	if($(' .change').is(":checked")){
+		$(".te").show(500);
+		$(".test").hide(500);
 		}
-    else{
-        $("#test2").hide();
-		$('.test').show();
-		}
+	else{
+		$(".te").hide(500);
+		$('.test').show(500);
+		}	
 }
+function home(){
+	window.location.href = "/home"
+}
+function add(){
+		if (device.value == 'cleaner'){
+			device=document.getElementById("select");
+		div=document.createElement("div");
+		div.className = "device";
+			var pic = document.createElement("img");
+			pic.src=('../static/images/cleaner.jpg');
+			pic.className="images"
+			pic.setAttribute('alt','robotic cleaner');
+			var head = document.createElement("h3");
+			head.innerHTML="Vacuum Cleaner";
+			var p=document.createElement("p");
+			var position=document.getElementById('position')
+			p.innerHTML="Position: " + position.value;
+			var insertpic=document.getElementById("list");
+			var piclist=document.createElement("li");
+			var ul=document.getElementById('ul');
+			piclist.appendChild(pic);
+			piclist.appendChild(head);
+			piclist.appendChild(p);
+			insertpic.appendChild(piclist);
+			document.getElementById("page").appendChild(insertpic);
+		}
+		else if (device.value == "wash"){
+			
+		}
+		else if (device.value == "mop"){
+			
+		}
+	}
+
 </script>
 
 
@@ -28,7 +60,7 @@ function valueChanged()
 <body>
 
 <!-- nav bar -->
-<img src="../static/images/websitelogo.png" class="logo" id="logo"/>
+<img src="../static/images/websitelogo.png" class="logo" id="logo" onclick="home()"/>
 <div id='cssmenu'>
 <ul>
 
@@ -70,12 +102,38 @@ function valueChanged()
 <button class='button' id="myBtn">Add Devices</button>
 
 <div id='page'>
-<ul id="list">
+	<ul id="list">
 	<li>
 		<div class="device">
-		<img class="image" src='../static/images/cleaner.jpg' alt='robotic cleaner'/>
-		<h3>Vacuum Cleaner</h3>
-		<p>Position: Living Room</p>
+			<img class="image" src='../static/images/cleaner.jpg' alt='robotic cleaner'/>
+			<h3>Vacuum Cleaner</h3>
+			<p>Position: Living Room</p>
+			
+			<p><span class='manOrauto'>Manual</span>
+				<label class="switch">
+				<input type="checkbox" class="change" onchange="valueChanged()" >
+				<span class="slider round"></span>
+				</label>
+			<span class='manOrauto'>Automatic</span>
+			</p>
+			
+			<div class="test">
+				<p><span class='onOff'> Off</span>
+					<label class="switch2">
+					<input type="checkbox">
+					<span class="slider2 round"></span>
+					</label>
+				<span class='onOff'>On</span></p>
+			</div>
+			<p class="te">dawdwdawdawdaw</p>
+		</div>
+	</li>
+	<li>
+		<div class="device">
+		<img class="image" src='../static/images/washingmachine.jpg' alt='washing machine'/>
+		<h3>Washing Machine</h3>
+		
+		<p>Position: Kitchen</p>
 		
 		<p><span class='manOrauto'>Manual</span>
 			<label class="switch">
@@ -93,33 +151,7 @@ function valueChanged()
 			</label>
 		<span class='onOff'>On</span></p>
 		</div>
-		<p id="test2">dawdwdawdawdaw</p>
-		</div>
-	</li>
-	<li>
-		<div class="device">
-		<img class="image" src='../static/images/washingmachine.jpg' alt='washing machine'/>
-		<h3>Washing Machine</h3>
-		
-		<p>Position: Kitchen</p>
-		
-		<p><span class='manOrauto'>Manual</span>
-			<label class="switch">
-			<input type="checkbox">
-			<span class="slider round"></span>
-			</label>
-		<span class='manOrauto'>Automatic</span>
-		</p>
-		
-		<div class="test">
-		<p><span class='onOff'> Off</span>
-			<label class="switch2">
-			<input type="checkbox">
-			<span class="slider2 round"></span>
-			</label>
-		<span class='onOff'>On</span></p>
-		</div>
-		
+		<p class="te">dawdwdawdawdaw</p>
 		</div>
 	</li>
 	<li>
@@ -131,7 +163,7 @@ function valueChanged()
 		
 		<p><span class='manOrauto'>Manual</span>
 			<label class="switch">
-			<input type="checkbox">
+			<input type="checkbox" class="change" onchange="valueChanged()" >
 			<span class="slider round"></span>
 			</label>
 		<span class='manOrauto'>Automatic</span>
@@ -145,10 +177,10 @@ function valueChanged()
 			</label>
 		<span class='onOff'>On</span></p>
 		</div>
-		
+		<p class="te">dawdwdawdawdaw</p>
 		</div>
 	</li>
-</ul>
+	</ul>
 </div>
 
 
@@ -176,7 +208,7 @@ function valueChanged()
   <label for="serial">Serial number:
   <input type="text" name="serial" id='serial' required>
 	<br><br>
-	<button id='add'>Add Device</button>
+	<button id='add' onclick="add()">Add Device</button>
 	</form>
    </div>
     </div>
