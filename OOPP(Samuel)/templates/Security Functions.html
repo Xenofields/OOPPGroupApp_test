@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+
+<title>Security Functions</title>
+<link href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway" rel="stylesheet">
+<link rel="stylesheet" href="../static/css/securityfunccss.css">
+</head>
+<body onload = "test()">
+<h1 style="font-family: 'Raleway', sans-serif; padding-left:50px;">Security Functions</h1>
+<button style="position:absolute; margin-left:50px;" onclick="document.getElementById('id01').style.display='block'" >Add your device</button>
+<div id="id01" class="modal" >
+
+	  <form class="modal-content animate" id = "myform" >
+		<div class="imgcontainer">
+		  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+		</div>
+
+		<div class="container" style="font-family: 'Poiret One', cursive;', sans-serif;">
+		  <label><b>What device do you want?</b></label>
+		  <input type="text" placeholder="Enter Device" id="device">
+
+		  <button class="lol" type="button" style="font-family: 'Raleway'; padding-left:30px;padding-right:30px;color:black;" onClick="display()" >Add Device</button>
+		</div>
+
+		<div class="container" style="background-color:#f1f1f1">
+		  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+		</div>
+	  </form>
+	</div>
+<div class="whitesia">
+<h1 style="text-align:center; font-family: 'Raleway', sans-serif;" >Current device(s) status</h1>
+</div>
+<hr>
+<div class="devicestatus" id="result">
+<div class="containment">
+<br>
+<br>
+<img src="../static/images/computer.png">
+<p>Dad's Computer</p>
+<p>Status : <span id ='test' style="color:lime">On</span>
+<p style="padding-bottom:10px;" id="off">Turn it off?</p>
+ <!-- Rounded switch -->
+<label class="switch" style="margin-left:60px;">
+  <input type="checkbox" id="checker">
+  <span class="slider round"></span>
+</label>
+
+
+
+</div>
+<div class="containment">
+<img src="../static/images/AirCon.png">
+<p>Bedroom AirCon</p>
+<p>Status : <span id= "test1" style="color:red">Off</span>
+<p style="padding-bottom:10px;" id="off1">Turn it off?</p>
+ <!-- Rounded switch -->
+<label class="switch" style="margin-left:60px;">
+  <input type="checkbox" id="checker1" >
+  <span class="slider round"></span>
+</label>
+
+</div>
+
+
+<div class="containment">
+<img src="../static/images/fan.png">
+<p>Fan</p>
+<p>Status : <span id = "test2" style="color:red">Off</span>
+<p style="padding-bottom:10px;" id="off2">Turn it off?</p>
+ <!-- Rounded switch -->
+<label class="switch" style="margin-left:60px;">
+  <input type="checkbox" id="checker2">
+  <span class="slider round"></span>
+</div>
+
+
+</div>
+<div class="whitesia">
+<h1 style="font-family: 'Raleway', sans-serif; text-align:center;" class="whitesia">Security Camera Feed</h1>
+</div>
+<div class="devicestatus">
+<div class="containment">
+<div class="camerafeed">
+</div>
+<p>Camera at <span style="color:blue;">Bedroom's Safe</span></p>
+<p>Motion: <span style="color:lime;">None</span></p>
+</div>
+<div class="containment">
+<div class="camerafeed">
+</div>
+<p>Camera at <span style="color:blue";>Window</span></p>
+<p style="padding-left:120px;">Motion: <span style="color:red;">Detected</span> &nbsp &nbsp <button>Notify Police</button></p>
+</div>
+</body>
+<script>
+	// Get the modal
+	var modal = document.getElementById('id01');
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+		if (event.target == modal) {
+			modal.style.display = "none";
+		}
+	}
+
+	</script>
+<script>
+document.getElementById('checker').onchange = function(){
+	if(this.checked == true){
+		var off = document.getElementById('off');
+		var elem = document.getElementById('test');
+		elem.style.color = "lime";
+		elem.innerHTML = 'On';
+		off.innerHTML = "Turn it off?";
+		}
+	else{
+		var elem = document.getElementById('test');
+		var off = document.getElementById('off');
+		elem.style.color = "red";
+		elem.innerHTML = 'Off';
+		off.innerHTML = "Turn it on?";
+		}
+	};
+document.getElementById('checker1').onchange = function(){
+	if(this.checked == true){
+		var elem = document.getElementById('test1');
+		var off = document.getElementById('off1');
+		elem.style.color = "lime";
+		elem.innerHTML = 'On';
+		off.innerHTML = "Turn it on?";
+		}
+	else{
+		var elem = document.getElementById('test1');
+		var off = document.getElementById('off1');
+		elem.style.color = "red";
+		elem.innerHTML = 'Off';
+		}
+	};
+document.getElementById('checker2').onchange = function(){
+	if(this.checked == true){
+		var elem = document.getElementById('test2');
+		var off = document.getElementById('off2');
+		elem.style.color = "lime";
+		elem.innerHTML = 'On';
+		off.innerHTML = "Turn it off?";
+		}
+	else{
+		var elem = document.getElementById('test2');
+		var off = document.getElementById('off2');
+		elem.style.color = "red";
+		elem.innerHTML = 'Off';
+		off.innerHTML = "Turn it on?";
+
+		}
+	};
+
+
+</script>
+
+<script>
+function test(){
+	test = document.createElement('div');
+	test.className =  "containment";
+	document.getElementById("result").appendChild(test);
+	bigtest = document.createElement('img');
+	bigtest.setAttribute("src", "../static/images/computer.png");
+	test.appendChild(bigtest);
+	content = document.createElement('p');
+	content.innerHTML = "My Device";
+	content.id = "testing";
+	test.appendChild(content);
+	status1 = document.createElement('p');
+	status1.innerHTML = 'Status : ';
+	test.appendChild(status1);
+	offon = document.createElement('span');
+	offon.innerHTML = 'Off';
+	offon.style.color = "red";
+	status1.appendChild(offon);
+	turning = document.createElement('p');
+	turning.innerHTML = 'Turn it on?';
+	test.appendChild(turning);
+	toggle = document.createElement('label');
+	toggle.className = 'switch';
+	toggle.style.marginLeft = "60px";
+	test.appendChild(toggle);
+	var checkbox = document.createElement('input');
+	checkbox.setAttribute("type", "checkbox");
+	toggle.appendChild(checkbox);
+	slider1 = document.createElement('span');
+	slider1.className = 'slider round';
+	toggle.appendChild(slider1);
+
+}
+
+
+
+
+</script>
+<script>
+    function display(){
+        var help = document.getElementById("device").value;
+	    document.getElementById("testing").value = help;
+	}
+</script>s
+
+
+
