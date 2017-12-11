@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<style>
-body{ 
+body{
     /* The image used */
-    background-image: url("Website Images/login page background.jpg");
+    background-image: url("../images/login page background.jpg");
 
     /* Full height */
-    height: 100%; 
+    height: 100%;
 
     /* Center and scale the image nicely */
     background-position: center;
@@ -22,9 +17,9 @@ body{
 	}
 .containment > p{
 	text-align:center;
-	font-family: 'Poiret One', cursive; 
+	font-family: 'Poiret One', cursive;
 	font-weight:bold;
-	
+
 }
 
 .containment > img{
@@ -95,7 +90,7 @@ input:checked + .slider:before {
 	background-color: rgba(255, 255, 255, 0.4);
 	border-left:4px solid grey;
 	padding-bottom:30px;
-	
+
 	}
 #devicestatus{
 	background-color: rgba(255, 255, 255, 0.4);
@@ -112,7 +107,7 @@ input:checked + .slider:before {
 	background-color: rgba(255, 255, 255, 0.4);
 	margin-right:200px;
 	margin-left:200px;
-	
+
 }
 
 /* Center the image and position the close button */
@@ -128,8 +123,8 @@ input:checked + .slider:before {
 
 	.container {
 		padding: 16px;
-		border-bottom-left-radius:20px;			
-		border-bottom-right-radius:20px;	
+		border-bottom-left-radius:20px;
+		border-bottom-right-radius:20px;
 
 	}
 
@@ -185,12 +180,12 @@ input:checked + .slider:before {
 	}
 
 	@-webkit-keyframes animatezoom {
-		from {-webkit-transform: scale(0)} 
+		from {-webkit-transform: scale(0)}
 		to {-webkit-transform: scale(1)}
 	}
-		
+
 	@keyframes animatezoom {
-		from {transform: scale(0)} 
+		from {transform: scale(0)}
 		to {transform: scale(1)}
 	}
 
@@ -204,7 +199,7 @@ input:checked + .slider:before {
 		   width: 100%;
 		}
 	}
-	
+
 	/* Center the image and position the close button */
 	.imgcontainer {
 		text-align: center;
@@ -218,8 +213,8 @@ input:checked + .slider:before {
 
 	.container {
 		padding: 16px;
-		border-bottom-left-radius:20px;			
-		border-bottom-right-radius:20px;	
+		border-bottom-left-radius:20px;
+		border-bottom-right-radius:20px;
 
 	}
 
@@ -255,119 +250,5 @@ input:checked + .slider:before {
 		padding: 10px 18px;
 		background-color: #f44336;
 		color:white;
-		
-	}
-		
-					
-	
 
-
-
-	
-</style>
-	
-<title>Security Functions</title>
-<link href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway" rel="stylesheet">
-</head>
-<body>
-<h1 style="font-family: 'Raleway', sans-serif; padding-left:50px;">Security Functions</h1>
-<button style="position:absolute; margin-left:50px;" onclick="document.getElementById('id01').style.display='block'" >Add your device</button>
-<div id="id01" class="modal" >
-	  
-	  <form class="modal-content animate">
-		<div class="imgcontainer">
-		  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-		</div>
-
-		<div class="container" style="font-family: 'Poiret One', cursive;', sans-serif;">
-		  <label><b>What device do you want?</b></label>
-		  <input type="text" placeholder="Enter Device" name="uname" required id="device">
-			
-		  <button class="lol" type="submit" style="font-family: 'Raleway'; padding-left:30px;padding-right:30px;color:black;" onClick="pr()">Add Device</button>
-		</div>
-
-		<div class="container" style="background-color:#f1f1f1">
-		  <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-		</div>
-	  </form>
-	</div>
-<div class="whitesia">
-<h1 style="text-align:center; font-family: 'Raleway', sans-serif;" >Current device(s) status</h1>
-</div>
-<hr>
-<div class="devicestatus" id="result">
-<div class="containment">
-<br>
-<br>
-<img src="Website Images/computer.png">
-<p>Dad's Computer</p>
-<p>Status : <span style="color:lime">On</span>
-<p style="padding-bottom:10px;">Turn it off?</p>
- <!-- Rounded switch -->
-<label class="switch" style="margin-left:60px;">
-  <input type="checkbox" >
-  <span class="slider round"></span>
-</label>
-
-
-
-</div>
-<div class="containment">
-<img src="Website Images/AirCon.png">
-<p  >Bedroom AirCon</p>
-<p>Status : <span style="color:red">Off</span>
-<p style="padding-bottom:10px;">Turn it off?</p>
- <!-- Rounded switch -->
-<label class="switch" style="margin-left:60px;">
-  <input type="checkbox" >
-  <span class="slider round"></span>
-</label>
-
-</div>
-
-
-<div class="containment">
-<img src="Website Images/fan.png">
-<p>Fan</p>
-<p>Status : <span style="color:red">Off</span>
-<p style="padding-bottom:10px;">Turn it off?</p>
- <!-- Rounded switch -->
-<label class="switch" style="margin-left:60px;">
-  <input type="checkbox" >
-  <span class="slider round"></span>
-</div>
-</div>
-<div class="whitesia">
-<h1 style="font-family: 'Raleway', sans-serif; text-align:center;" class="whitesia">Security Camera Feed</h1>
-</div>
-<div class="devicestatus">
-<div class="containment">
-<div class="camerafeed">
-</div>
-<p>Camera at <span style="color:blue;">Bedroom's Safe</span></p>
-<p>Motion: <span style="color:lime;">None</span></p>
-</div>
-<div class="containment">
-<div class="camerafeed">
-</div>
-<p>Camera at <span style="color:blue";>Window</span></p>
-<p style="padding-left:120px;">Motion: <span style="color:red;">Detected</span> &nbsp &nbsp <button>Notify Police</button></p>
-</div>
-<script>
-	// Get the modal
-	var modal = document.getElementById('id01');
-
-	// When the user clicks anywhere outside of the modal, close it
-	window.onclick = function(event) {
-		if (event.target == modal) {
-			modal.style.display = "none";
-		}
-	}
-	
-	function pr(){
-		document.getElementById("result").innerHTML =
-			document.getElementById('device').value
-			}
-	</script>
-
-
+}
