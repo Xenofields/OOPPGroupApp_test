@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <title>Haze</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,7 +29,7 @@
 </div>
 
 
-<link rel="stylesheet" type="text/css" href="css/hazepage.css">
+<link rel="stylesheet" type="text/css" href="static/css.css">
 <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='css.css') }}">
 
 
@@ -123,7 +123,8 @@
 
         </li>
         <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-green w3-padding-large">Register</button>
+          <button class="w3-button w3-green w3-padding-large"><a href="SMS.html" style='text-decoration:none;'>Register</a></button>
+
         </li>
       </ul>
     </div>
@@ -135,7 +136,7 @@
 
         </li>
         <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-green w3-padding-large">Register</button>
+          <button class="w3-button w3-green w3-padding-large"><a href="SMSandemail.html" style='text-decoration:none;'>Register</a></button>
         </li>
       </ul>
     </div>
@@ -147,7 +148,7 @@
 
         </li>
         <li class="w3-light-grey w3-padding-24">
-          <button class="w3-button w3-green w3-padding-large">Register</button>
+          <button class="w3-button w3-green w3-padding-large"><a href="email.html" style='text-decoration:none;'>Register</a></button>
         </li>
       </ul>
     </div>
@@ -223,10 +224,22 @@
       <label>Air Purifier Brand</label>
       <input class="w3-input w3-border w3-hover-border-black" style="width:100%;" name="Message" required>
     </div>
-    <button type="submit" class="w3-button w3-block w3-black">Send</button>
+
+
+	<script type="text/javascript">
+function conf()
+{
+var con=confirm("You have successfully registered!");
+}
+</script>
+</head>
+<body>
+<form><input type="submit" class="w3-button w3-block w3-black" onClick="conf()"/></form>
+
   </form>
 
 </div>
+
 
 <!-- Footer -->
 
