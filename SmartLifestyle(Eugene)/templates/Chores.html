@@ -6,6 +6,22 @@
 <link rel="stylesheet" href="../static/css/chores.css">
 <link rel="stylesheet" href="../static/css/navbar.css">
 <script src="../static/js/chores.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+function valueChanged()
+{
+	
+    if($('.change').is(":checked")){
+        $("#test2").show();
+		$(".test").hide();
+		}
+    else{
+        $("#test2").hide();
+		$('.test').show();
+		}
+}
+</script>
+
 
 <title>Smart Lifestyle - My Profile</title>
 </head>
@@ -53,27 +69,40 @@
 <!-- Trigger/Open The Modal -->
 <button class='button' id="myBtn">Add Devices</button>
 
-<div class='list'>
-<ul>
+<div id='page'>
+<ul id="list">
 	<li>
 		<div class="device">
 		<img class="image" src='../static/images/cleaner.jpg' alt='robotic cleaner'/>
 		<h3>Vacuum Cleaner</h3>
 		<p>Position: Living Room</p>
+		
 		<p><span class='manOrauto'>Manual</span>
 			<label class="switch">
-			<input type="checkbox">
+			<input type="checkbox" class="change" onchange="valueChanged()" >
 			<span class="slider round"></span>
 			</label>
 		<span class='manOrauto'>Automatic</span>
 		</p>
+		
+		<div class="test">
+		<p><span class='onOff'> Off</span>
+			<label class="switch2">
+			<input type="checkbox">
+			<span class="slider2 round"></span>
+			</label>
+		<span class='onOff'>On</span></p>
+		</div>
+		<p id="test2">dawdwdawdawdaw</p>
 		</div>
 	</li>
 	<li>
 		<div class="device">
 		<img class="image" src='../static/images/washingmachine.jpg' alt='washing machine'/>
 		<h3>Washing Machine</h3>
+		
 		<p>Position: Kitchen</p>
+		
 		<p><span class='manOrauto'>Manual</span>
 			<label class="switch">
 			<input type="checkbox">
@@ -81,13 +110,25 @@
 			</label>
 		<span class='manOrauto'>Automatic</span>
 		</p>
+		
+		<div class="test">
+		<p><span class='onOff'> Off</span>
+			<label class="switch2">
+			<input type="checkbox">
+			<span class="slider2 round"></span>
+			</label>
+		<span class='onOff'>On</span></p>
+		</div>
+		
 		</div>
 	</li>
 	<li>
 		<div class="device">
 		<img class="image" src='../static/images/mop.jpg' alt='robotic mop'/>
 		<h3>Electronic Mop</h3>
+		
 		<p>Position: Kitchen</p>
+		
 		<p><span class='manOrauto'>Manual</span>
 			<label class="switch">
 			<input type="checkbox">
@@ -95,10 +136,21 @@
 			</label>
 		<span class='manOrauto'>Automatic</span>
 		</p>
+		
+		<div class="test">
+		<p><span class='onOff'> Off</span>
+			<label class="switch2">
+			<input type="checkbox">
+			<span class="slider2 round"></span>
+			</label>
+		<span class='onOff'>On</span></p>
+		</div>
+		
 		</div>
 	</li>
 </ul>
 </div>
+
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -110,8 +162,23 @@
       <h2>Add a Device</h2>
     </div>
     <div class="modal-body">
-      <p>Some text in the Modal Body</p>
-      <p>Some other text...</p>
+	<form>
+		<select name="device" id="select">
+			<option value="cleaner">Vacuum Cleaner</option>
+			<option value="wash">Washing Machine</option>
+			<option value="mop">Electronic Mop</option>
+			<option value="others">Others</option>
+		</select>
+  <br><br>
+  <div class='options'>
+  <label for="position">Position:
+  <input type="text" name="position" id='position' required><br>
+  <label for="serial">Serial number:
+  <input type="text" name="serial" id='serial' required>
+	<br><br>
+	<button id='add'>Add Device</button>
+	</form>
+   </div>
     </div>
   </div>
 

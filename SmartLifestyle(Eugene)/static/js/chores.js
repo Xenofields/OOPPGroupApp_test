@@ -26,19 +26,35 @@ window.onload = function(){
 		}
 	}
 	
-var slide=document.getElementById("switch");
-var auto = document.getElementById("test2");
-var manual=document.getElementById("test");
-auto.style.display = "none"
-slide.onclick=function(){
-    if (auto.style.display === "none") {
-        auto.style.display = "block";
-		manual.style.display = "none";
-    } else {
-        auto.style.display = "none";
-		manual.style.display = "block";
-    }
-}
-
-
+	var add=document.getElementById("add")
+	add.onclick = function(){
+		device=document.getElementById("select");
+		div=document.createElement("div");
+		div.className = "device";
+		if (device.value == 'cleaner'){
+			var pic = document.createElement("img");
+			pic.src=('../static/images/cleaner.jpg');
+			pic.className="images"
+			pic.setAttribute('alt','robotic cleaner');
+			var head = document.createElement("h3");
+			head.innerHTML="Vacuum Cleaner";
+			var p=document.createElement("p");
+			var position=document.getElementById('position')
+			p.innerHTML="Position: " + position.value;
+			var insertpic=document.getElementById("list");
+			var piclist=document.createElement("li");
+			var ul=document.getElementById('ul');
+			piclist.appendChild(pic);
+			piclist.appendChild(head);
+			piclist.appendChild(p);
+			insertpic.appendChild(piclist);
+			
+		}
+		else if (device.value == "wash"){
+			
+		}
+		else if (device.value == "mop"){
+			
+		}
+	}
 }

@@ -18,7 +18,7 @@
 	padding:20px 35px;
 	font-size:16px;
 }
-.button:hover{
+.button:hover, .add:hover{
 	background-color:#e15a1f;
 	color:white;
 	cursor:pointer;
@@ -32,13 +32,13 @@
 hr{width:auto;}
 
 
-.list ul{
+#page ul{
 	list-style-type:none;
 	display:block;
 	position:relative;
 	top:100px;
 }
-.list li{
+#page li{
 	display: inline-block;
 	vertical-align: top;
 	position: relative;
@@ -52,12 +52,55 @@ hr{width:auto;}
 }
 .device{
 	background-color:#ffffff;
-	height:5000px;
+	height:500px;
 	text-align:center;
 }	
 .manOrauto{
 	position:relative;
+	top:8px;
+} 
+.onOff{
+	position:relative;
 	bottom:12px;
+	right:12px;
+}
+#select{
+	font-size:24px;
+	position: relative;
+	top:15px;
+}
+#position, #serial{
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+	position:relative;
+	width: auto;
+    padding: 5px 20px;
+    margin: 8px 0;
+	font-size:20px;
+	
+}
+
+.options{
+	font-size:20px;
+	text-align:center;
+}
+#position:focus, #serial:focus {
+    border: 3px solid #555;
+}
+#add{
+	background-color: #4CAF50;
+	border-radius: 4px;
+	padding:15px;
+	transition: all 0.3s ease 0s;
+	color:white;
+	font-size:18px;
+	position:center;
+}
+label{
+    display:inline-block;
+	width: -800px;
+	text-align:center;
 }
 /* sliding switch*/
 
@@ -70,7 +113,7 @@ hr{width:auto;}
 }
 
 /* Hide default HTML checkbox */
-.switch input {display:none;}
+
 /* The slider */
 .slider {
   position: absolute;
@@ -119,6 +162,68 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
+/* On/Off switch*/
+
+.switch2{
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  right:12px;
+}
+
+/* Hide default HTML checkbox */
+.switch2 input {display:none;}
+
+.slider2 {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color:#ccc	;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider2:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider2 {
+  background-color: #4CAF50;
+}
+
+input:focus + .slider2 {
+  box-shadow: 0 0 1px #4CAF50;
+}
+
+input:checked + .slider2:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider2.round {
+  border-radius: 34px;
+}
+
+.slider2.round:before {
+  border-radius: 50%;
+}
+
+
+
 /* The Modal*/
 
 /* The Modal (background) */
@@ -150,7 +255,8 @@ input:checked + .slider:before {
     -webkit-animation-duration: 0.4s;
     animation-name: animatetop;
     animation-duration: 0.4s;
-	width:50%;
+	width:25%;
+	height:50%;
 }
 
 /* Add Animation */
