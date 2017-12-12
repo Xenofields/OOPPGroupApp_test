@@ -4,13 +4,15 @@
 	<link href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway" rel="stylesheet">
 	<link rel="stylesheet" href="../static/css/animate.css">
     <link rel="stylesheet" href="../static/css/website css.css">
+	<script src="../static/js/signup.js"></script>
+
 
 	<body>
 
 
 	<h2 style="font-family: 'Raleway', sans-serif; padding-left:20px;"
 ><img style="width:220px; height:80px;" src="../static/images/websitelogo.png" class="animate fadeInUp"/></h2>
-<h1 style="font-family: 'Poiret One', cursive; text-align:center; font-size:100px; color:#909090; margin-bottom:10px;"  class="animate fadeInDown" >Welcome</h2>
+<h1 style="font-family: 'Poiret One', cursive; text-align:center; font-size:100px; color:#909090; margin-bottom:10px;"  class="animate fadeInDown" >Welcome</h1>
 <div class="whitebox">
 <p style="text-align:center; font-family: 'Raleway', sans-serif; ">Live life the easy way.</p>
 </div>
@@ -19,20 +21,20 @@
 </div>
 	<div id="id01" class="modal" >
 
-	  <form class="modal-content animate" action="/action_page.php">
+	  <form class="modal-content animate" action = "{{ url_for('home') }}">
 		<div class="imgcontainer">
 		  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-		  <img src="../../untitled3/static/images/websitelogo.png" alt="Avatar" class="avatar">
+		  <img src="../static/images/websitelogo.png" alt="Avatar" class="avatar">
 		</div>
 
 		<div class="container" style="font-family: 'Poiret One', cursive;', sans-serif;">
 		  <label><b>Username</b></label>
-		  <input type="text" placeholder="Enter Username" name="uname" required>
+		  <input type="email" placeholder="Enter Username" name="uname" id="txtEmail" required>
 
 		  <label><b>Password</b></label>
-		  <input type="password" placeholder="Enter Password" name="psw" required>
+		  <input type="password" placeholder="Enter Password" name="psw" id="txtPassword" required>
 
-		  <button type="submit" style="font-family: 'Raleway'; padding-left:30px;padding-right:30px;">Login</button>
+		  <button style="font-family: 'Raleway'; padding-left:30px;padding-right:30px;" id="btnLogin">Login</button>
 		  <input type="checkbox" checked="checked"> Remember me
 		</div>
 
@@ -43,7 +45,19 @@
 	  </form>
 	</div>
 	<p style="text-align:center;font-family: 'Raleway', sans-serif;">Don't have an account? Sign up <span class="signup"><a class="signup" href="Sign Up Page.html">here</a></span>.
-
+<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB4sBU2x4k9W5RuNfuuNUMcSyh94t9HT4I",
+    authDomain: "login-page-c70ab.firebaseapp.com",
+    databaseURL: "https://login-page-c70ab.firebaseio.com",
+    projectId: "login-page-c70ab",
+    storageBucket: "login-page-c70ab.appspot.com",
+    messagingSenderId: "46349091083"
+  };
+  firebase.initializeApp(config);
+</script>
 	<script>
 	// Get the modal
 	var modal = document.getElementById('id01');
