@@ -52,7 +52,7 @@ hr{width:auto;}
 }
 .device{
 	background-color:#ffffff;
-	height:500px;
+	height:550px;
 	text-align:center;
 }	
 .manOrauto{
@@ -93,7 +93,9 @@ hr{width:auto;}
 
 	
 }
-
+.pos{
+	font-size:19px;
+}
 #add{
 	background-color: #4CAF50;
 	border-radius: 4px;
@@ -103,11 +105,41 @@ hr{width:auto;}
 	font-size:18px;
 	position:center;
 }
-label{
+.modal-body label{
     display:inline-block;
 	width: -800px;
-	text-align:center;
+	text-align:left;
 }
+
+.x {
+    color: #FF0000;
+    float: left;
+	transition: all 0.4s ease 0s;
+    font-size:22px;
+    font-weight: bold;
+}
+.remove:hover,
+.remove:focus,
+.remove:hover span {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+	background-color:red;
+	color:white;
+}
+
+.remove{
+	background-color: #ffdddd;
+	border-radius: 4px;
+	transition: all 0.3s ease 0s;
+	font-weight: bold;
+	font-size:22px;
+	border: 1px solid black;
+	padding:3px 7px 3px 7px;
+}
+
+
+
 /* sliding switch*/
 
 /* The switch - the box around the slider */
@@ -218,6 +250,8 @@ input:checked + .slider2:before {
   -ms-transform: translateX(26px);
   transform: translateX(26px);
 }
+
+
 
 /* Rounded sliders */
 .slider2.round {
