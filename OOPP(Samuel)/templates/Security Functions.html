@@ -7,21 +7,21 @@
 <link href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway" rel="stylesheet">
 <link rel="stylesheet" href="../static/css/securityfunccss.css">
 </head>
-<body onload = "test()">
+<body>
 <h1 style="font-family: 'Raleway', sans-serif; padding-left:50px;">Security Functions</h1>
 <button style="position:absolute; margin-left:50px;" onclick="document.getElementById('id01').style.display='block'" >Add your device</button>
 <div id="id01" class="modal" >
 
 	  <form class="modal-content animate" id = "myform" >
 		<div class="imgcontainer">
-		  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+		  <span onclick="document.getElementById('id01').style.display='none';" class="close" title="Close Modal">&times;</span>
 		</div>
 
 		<div class="container" style="font-family: 'Poiret One', cursive;', sans-serif;">
 		  <label><b>What device do you want?</b></label>
 		  <input type="text" placeholder="Enter Device" id="device">
 
-		  <button class="lol" type="button" style="font-family: 'Raleway'; padding-left:30px;padding-right:30px;color:black;" onClick="display()" >Add Device</button>
+		  <button class="lol" type="button" style="font-family: 'Raleway'; padding-left:30px;padding-right:30px;color:black;" onClick= "test();display()">Add Device</button>
 		</div>
 
 		<div class="container" style="background-color:#f1f1f1">
@@ -94,6 +94,19 @@
 <p style="padding-left:120px;">Motion: <span style="color:red;">Detected</span> &nbsp &nbsp <button>Notify Police</button></p>
 </div>
 </body>
+	<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB4sBU2x4k9W5RuNfuuNUMcSyh94t9HT4I",
+    authDomain: "login-page-c70ab.firebaseapp.com",
+    databaseURL: "https://login-page-c70ab.firebaseio.com",
+    projectId: "login-page-c70ab",
+    storageBucket: "login-page-c70ab.appspot.com",
+    messagingSenderId: "46349091083"
+  };
+  firebase.initializeApp(config);
+</script>
 <script>
 	// Get the modal
 	var modal = document.getElementById('id01');
@@ -161,36 +174,41 @@ document.getElementById('checker2').onchange = function(){
 
 <script>
 function test(){
-	test = document.createElement('div');
-	test.className =  "containment";
-	document.getElementById("result").appendChild(test);
-	bigtest = document.createElement('img');
-	bigtest.setAttribute("src", "../static/images/computer.png");
-	test.appendChild(bigtest);
-	content = document.createElement('p');
-	content.innerHTML = "My Device";
-	content.id = "testing";
-	test.appendChild(content);
-	status1 = document.createElement('p');
-	status1.innerHTML = 'Status : ';
-	test.appendChild(status1);
-	offon = document.createElement('span');
-	offon.innerHTML = 'Off';
-	offon.style.color = "red";
-	status1.appendChild(offon);
-	turning = document.createElement('p');
-	turning.innerHTML = 'Turn it on?';
-	test.appendChild(turning);
-	toggle = document.createElement('label');
-	toggle.className = 'switch';
-	toggle.style.marginLeft = "60px";
-	test.appendChild(toggle);
-	var checkbox = document.createElement('input');
-	checkbox.setAttribute("type", "checkbox");
-	toggle.appendChild(checkbox);
-	slider1 = document.createElement('span');
-	slider1.className = 'slider round';
-	toggle.appendChild(slider1);
+
+
+		majordiv = document.createElement('div');
+        majordiv.className = "containment";
+        document.getElementById("result").appendChild(majordiv);
+        bigtest = document.createElement('img');
+        bigtest.setAttribute("src", "../static/images/computer.png");
+        majordiv.appendChild(bigtest);
+        content = document.createElement('p');
+        content.innerHTML = "My Device";
+        content.id = "testing";
+        majordiv.appendChild(content);
+        status1 = document.createElement('p');
+        status1.innerHTML = 'Status : ';
+        majordiv.appendChild(status1);
+        offon = document.createElement('span');
+        offon.innerHTML = 'Off';
+        offon.style.color = "red";
+        status1.appendChild(offon);
+        turning = document.createElement('p');
+        turning.innerHTML = 'Turn it on?';
+        majordiv.appendChild(turning);
+        toggle = document.createElement('label');
+        toggle.className = 'switch';
+        toggle.style.marginLeft = "60px";
+        majordiv.appendChild(toggle);
+        var checkbox = document.createElement('input');
+        checkbox.setAttribute("type", "checkbox");
+        toggle.appendChild(checkbox);
+        slider1 = document.createElement('span');
+        slider1.className = 'slider round';
+        toggle.appendChild(slider1);
+
+
+
 
 }
 
@@ -200,10 +218,10 @@ function test(){
 </script>
 <script>
     function display(){
-        var help = document.getElementById("device").value;
-	    document.getElementById("testing").value = help;
+        var testlol = document.getElementById("device").value;
+	    document.getElementById("testing").innerHTML = testlol
 	}
-</script>s
+</script>
 
 
 
