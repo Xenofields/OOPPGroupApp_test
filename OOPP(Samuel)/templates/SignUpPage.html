@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<link href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway" rel="stylesheet">
+<link rel="stylesheet" href="../static/css/animate.css">
+<link rel="stylesheet" href="../static/css/logincss.css">
+<body>
+
+<h2 style="font-family: 'Raleway', sans-serif; padding-left:20px;"
+><img style="width:220px; height:80px;" src="../static/images/websitelogo.png" class="animate fadeInUp"/></h2>
+<h1 style="font-family: 'Poiret One', cursive; text-align:center; font-size:100px; color:#909090; margin-bottom:10px;"  class="animate fadeInDown" >Start living smart</h1>
+<p style="text-align:center; font-family: 'Raleway', sans-serif; ">Secure your household, and let your family live in comfort.</p>
+
+<div class="center">
+<button id = "onclick="document.getElementById('id01').style.display='block'" style="width:auto;margin-left:550px;">Sign Up</button>
+
+</div>
+<div id="id01" class="modal">
+  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">x</span>
+  <form class="modal-content animate" action = LoginPage.html>
+  <div style="text-align:center; padding-top:10px;">
+  	<img src="../static/images/websitelogo.png" alt="Avatar" class="avatar" style="width:220px; height:80px; align:center;">
+    </div>
+	<div class="container" 	style="font-family: 'Raleway'; ">
+      <label><b>Email</b></label>
+      <input type="email" placeholder="Enter Email" name="email" required id="txtEmail">
+
+      <label><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" id="txtPassword"required>
+      <input type="checkbox" checked="checked"> Remember me
+      <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+
+      <div class="clearfix">
+        <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+        <button type="submit" class="signupbtn" id="btnSignUp" >Sign Up</button>
+      </div>
+    </div>
+  </form>
+</div>
+<script src="../static/js/signup.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-messaging.js"></script>
+
+ <script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyB4sBU2x4k9W5RuNfuuNUMcSyh94t9HT4I",
+    authDomain: "login-page-c70ab.firebaseapp.com",
+    databaseURL: "https://login-page-c70ab.firebaseio.com",
+    projectId: "login-page-c70ab",
+    storageBucket: "login-page-c70ab.appspot.com",
+    messagingSenderId: "46349091083"
+  };
+</script>
+<script>
+  firebase.initializeApp(config);
+
+</script>
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</body>
+</html>

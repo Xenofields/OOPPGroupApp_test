@@ -70,7 +70,7 @@ input[type=text], input[type=password], input[type=email], select {
     box-sizing: border-box;
 	bottom:4.5px;
 	position:relative;
-	font-size:20px
+	font-size:20px;
 }
 input[type=text]:focus {
     border: 3px solid #555;
