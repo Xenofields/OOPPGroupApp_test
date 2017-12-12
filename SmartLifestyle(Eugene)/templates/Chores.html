@@ -6,13 +6,61 @@
 <link rel="stylesheet" href="../static/css/chores.css">
 <link rel="stylesheet" href="../static/css/navbar.css">
 <script src="../static/js/chores.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+function valueChanged(){	
+	if($(' .change').is(":checked")){
+		$(".te").show(500);
+		$(".test").hide(500);
+		}
+	else{
+		$(".te").hide(500);
+		$('.test').show(500);
+		}	
+}
+function home(){
+	window.location.href = "/home"
+}
+function add(){
+		if (device.value == 'cleaner'){
+			device=document.getElementById("select");
+		div=document.createElement("div");
+		div.className = "device";
+			var pic = document.createElement("img");
+			pic.src=('../static/images/cleaner.jpg');
+			pic.className="images"
+			pic.setAttribute('alt','robotic cleaner');
+			var head = document.createElement("h3");
+			head.innerHTML="Vacuum Cleaner";
+			var p=document.createElement("p");
+			var position=document.getElementById('position')
+			p.innerHTML="Position: " + position.value;
+			var insertpic=document.getElementById("list");
+			var piclist=document.createElement("li");
+			var ul=document.getElementById('ul');
+			piclist.appendChild(pic);
+			piclist.appendChild(head);
+			piclist.appendChild(p);
+			insertpic.appendChild(piclist);
+			document.getElementById("page").appendChild(insertpic);
+		}
+		else if (device.value == "wash"){
+			
+		}
+		else if (device.value == "mop"){
+			
+		}
+	}
+
+</script>
+
 
 <title>Smart Lifestyle - My Profile</title>
 </head>
 <body>
 
 <!-- nav bar -->
-<img src="../static/images/websitelogo.png" class="logo" id="logo"/>
+<img src="../static/images/websitelogo.png" class="logo" id="logo" onclick="home()"/>
 <div id='cssmenu'>
 <ul>
 
@@ -53,52 +101,88 @@
 <!-- Trigger/Open The Modal -->
 <button class='button' id="myBtn">Add Devices</button>
 
-<div class='list'>
-<ul>
+<div id='page'>
+	<ul id="list">
 	<li>
 		<div class="device">
-		<img class="image" src='../static/images/cleaner.jpg' alt='robotic cleaner'/>
-		<h3>Vacuum Cleaner</h3>
-		<p>Position: Living Room</p>
-		<p><span class='manOrauto'>Manual</span>
-			<label class="switch">
-			<input type="checkbox">
-			<span class="slider round"></span>
-			</label>
-		<span class='manOrauto'>Automatic</span>
-		</p>
+			<img class="image" src='../static/images/cleaner.jpg' alt='robotic cleaner'/>
+			<h3>Vacuum Cleaner</h3>
+			<p>Position: Living Room</p>
+			
+			<p><span class='manOrauto'>Manual</span>
+				<label class="switch">
+				<input type="checkbox" class="change" onchange="valueChanged()" >
+				<span class="slider round"></span>
+				</label>
+			<span class='manOrauto'>Automatic</span>
+			</p>
+			
+			<div class="test">
+				<p><span class='onOff'> Off</span>
+					<label class="switch2">
+					<input type="checkbox">
+					<span class="slider2 round"></span>
+					</label>
+				<span class='onOff'>On</span></p>
+			</div>
+			<p class="te">dawdwdawdawdaw</p>
 		</div>
 	</li>
 	<li>
 		<div class="device">
 		<img class="image" src='../static/images/washingmachine.jpg' alt='washing machine'/>
 		<h3>Washing Machine</h3>
+		
 		<p>Position: Kitchen</p>
+		
 		<p><span class='manOrauto'>Manual</span>
 			<label class="switch">
-			<input type="checkbox">
+			<input type="checkbox" class="change" onchange="valueChanged()" >
 			<span class="slider round"></span>
 			</label>
 		<span class='manOrauto'>Automatic</span>
 		</p>
+		
+		<div class="test">
+		<p><span class='onOff'> Off</span>
+			<label class="switch2">
+			<input type="checkbox">
+			<span class="slider2 round"></span>
+			</label>
+		<span class='onOff'>On</span></p>
+		</div>
+		<p class="te">dawdwdawdawdaw</p>
 		</div>
 	</li>
 	<li>
 		<div class="device">
 		<img class="image" src='../static/images/mop.jpg' alt='robotic mop'/>
 		<h3>Electronic Mop</h3>
+		
 		<p>Position: Kitchen</p>
+		
 		<p><span class='manOrauto'>Manual</span>
 			<label class="switch">
-			<input type="checkbox">
+			<input type="checkbox" class="change" onchange="valueChanged()" >
 			<span class="slider round"></span>
 			</label>
 		<span class='manOrauto'>Automatic</span>
 		</p>
+		
+		<div class="test">
+		<p><span class='onOff'> Off</span>
+			<label class="switch2">
+			<input type="checkbox">
+			<span class="slider2 round"></span>
+			</label>
+		<span class='onOff'>On</span></p>
+		</div>
+		<p class="te">dawdwdawdawdaw</p>
 		</div>
 	</li>
-</ul>
+	</ul>
 </div>
+
 
 <!-- The Modal -->
 <div id="myModal" class="modal">
@@ -110,8 +194,23 @@
       <h2>Add a Device</h2>
     </div>
     <div class="modal-body">
-      <p>Some text in the Modal Body</p>
-      <p>Some other text...</p>
+	<form>
+		<select name="device" id="select">
+			<option value="cleaner">Vacuum Cleaner</option>
+			<option value="wash">Washing Machine</option>
+			<option value="mop">Electronic Mop</option>
+			<option value="others">Others</option>
+		</select>
+  <br><br>
+  <div class='options'>
+  <label for="position">Position:
+  <input type="text" name="position" id='position' required><br>
+  <label for="serial">Serial number:
+  <input type="text" name="serial" id='serial' required>
+	<br><br>
+	<button id='add' onclick="add()">Add Device</button>
+	</form>
+   </div>
     </div>
   </div>
 
