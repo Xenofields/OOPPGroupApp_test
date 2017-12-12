@@ -61,7 +61,7 @@ hr{width:auto;}
 } 
 .onOff{
 	position:relative;
-	bottom:12px;
+	top:7px;
 	right:12px;
 }
 #select{
@@ -77,10 +77,11 @@ hr{width:auto;}
 	width: auto;
     padding: 5px 20px;
     margin: 8px 0;
-	font-size:20px;
-	
+	font-size:20px;	
 }
-
+#auto1,#auto2,#auto3{
+	display:none;
+}
 .options{
 	font-size:20px;
 	text-align:center;
@@ -88,6 +89,11 @@ hr{width:auto;}
 #position:focus, #serial:focus {
     border: 3px solid #555;
 }
+#start,#duration{
+
+	
+}
+
 #add{
 	background-color: #4CAF50;
 	border-radius: 4px;
@@ -173,7 +179,7 @@ input:checked + .slider:before {
 }
 
 /* Hide default HTML checkbox */
-.switch2 input {display:none;}
+
 
 .slider2 {
   position: absolute;

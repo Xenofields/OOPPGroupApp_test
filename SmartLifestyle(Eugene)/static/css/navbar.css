@@ -12,6 +12,9 @@ body{
     width:220px;
     height:80px;
 }
+.logo:hover{
+	cursor:pointer;
+}
 #cssmenu,
 #cssmenu ul,
 #cssmenu li,
