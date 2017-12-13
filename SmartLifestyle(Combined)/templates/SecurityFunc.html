@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 <html>
-<meta charset="UTF-8">
-
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-<link rel="shortcut icon" href="../static/images/websitelogo.png" />
- <script>
-function home(){
-	window.location.href = "/home"
-}
-
-</script>
 
 <title>Security Functions</title>
 <link href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway" rel="stylesheet">
@@ -18,20 +9,18 @@ function home(){
 <link rel="stylesheet" href="../static/css/navbar.css">
 </head>
 <body>
-
-<!-- nav bar -->
-<img src="../static/images/websitelogo.png" class="logo" id="logo" onclick="home()"/>
+<img src="../static/images/websitelogo.png" class="logo" id="logo"/>
 <div id='cssmenu'>
 <ul>
 
-   <li><a href='/home'><span>HOME</span></a></li>
-   <li class='active has-sub'><a href='/application' id="active"><span>APPLICATIONS</span></a>
+   <li><a href='/home' id="active"><span>HOME</span></a></li>
+   <li class='active has-sub'><a href='/application'><span>APPLICATIONS</span></a>
       <ul>
-         <li class='has-sub'><a href='/haze'><span>Haze Warning</span></a>
+         <li class='has-sub'><a href='Haze.html'><span>Haze Warning</span></a>
          </li>
-         <li class='has-sub'><a href='/family'><span>Family Bonding</span></a>
+         <li class='has-sub'><a href='OOPP1.html'><span>Family Bonding</span></a>
          </li>
-		 <li class='has-sub'><a href='/securityfunction'  id="active"><span>Security</span></a>
+		 <li class='has-sub'><a href='Security_Functions.html'><span>Security</span></a>
          </li>
 		 <li class='has-sub'><a href='/household_chores'><span>Household Chores</span></a>
          </li>
@@ -50,7 +39,6 @@ function home(){
    <li class='last'><a href='#'><span>ABOUT</span></a></li>
 </ul>
 </div>
-
 <h1 style="font-family: 'Raleway', sans-serif; padding-left:50px;">Security Functions</h1>
 <button style="position:absolute; margin-left:50px;" onclick="document.getElementById('id01').style.display='block'" >Add your device</button>
 <div id="id01" class="modal" >
@@ -218,12 +206,20 @@ document.getElementById('checker2').onchange = function(){
 <script>
 function test(){
 
-
+		var testlol = document.getElementById("device").value;
 		majordiv = document.createElement('div');
         majordiv.className = "containment";
         document.getElementById("result").appendChild(majordiv);
         bigtest = document.createElement('img');
-        bigtest.setAttribute("src", "../static/images/computer.png");
+        if (testlol == "fan"){
+        	bigtest.setAttribute("src", "../static/images/fan.png");
+		}
+		else if (testlol == "computer"){
+			bigtest.setAttribute("src", "../static/images/computer.png");
+		}else if(testlol =="aircon"){
+	        bigtest.setAttribute("src", "../static/images/AirCon.png");
+
+		}
         majordiv.appendChild(bigtest);
         content = document.createElement('p');
         content.innerHTML = "My Device";
