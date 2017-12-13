@@ -22,9 +22,9 @@ window.onload = function(){
 		
 	window.setInterval(
 		function (){
-			water=water + 1;
-			document.getElementById("water").innerHTML = water + 'm<sup>3</sup>';
-		}, 1000);
+			water= water + 0.05;
+			document.getElementById("water").innerHTML = parseFloat(water).toFixed(2) + 'm<sup>3</sup>';
+		}, 500);
 	window.setInterval(
 		function (){
 			if(water <= 40){
@@ -41,7 +41,7 @@ window.onload = function(){
 		function (){
 			gas=gas + 1;
 			document.getElementById("gas").innerHTML = gas + 'kWh';
-		}, 5000);
+		}, 3500);
 	
 	window.setInterval(
 		function (){

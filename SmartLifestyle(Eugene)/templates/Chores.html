@@ -102,25 +102,27 @@ function home(){
 			
 			<p><span class='manOrauto'>Manual</span>
 				<label class="switch">
-				<input type="checkbox" id="change1" onchange="valueChanged()" >
-				<span class="slider round"></span>
+					<input type="checkbox" id="change1" onchange="valueChanged()">
+					<span class="slider round"></span>
 				</label>
 			<span class='manOrauto'>Automatic</span>
 			</p>
 			
 			<div id="manual1">
-				<p><span class='onOff'> Off</span>
+				<p>
+				<span class='onOff'> Off</span>
 					<label class="switch2">
-					<input type="checkbox">
-					<span class="slider2 round"></span>
+						<input type="checkbox">
+						<span class="slider2 round"></span>
 					</label>
-				<span class='onOff'>On</span></p>
+				<span class='onOff'>On</span>
+				</p>
 			</div>
 			<div id="auto1">
 				<label for="timestart">Start Time:
-				<input type="text" id="start" name="start"><br>
+				<input type="text" id="timestart" name="start"><br>
 				<label for="duration">Duration:
-				<input type="text" id="duration" name="duration">
+				<input type="text" id="duration" name="duration"/>
 			</div>
 			<br><br><br>
 			<button class="remove">
