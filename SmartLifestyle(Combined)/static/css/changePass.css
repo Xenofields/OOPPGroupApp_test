@@ -40,7 +40,7 @@ div.set li a:hover {
 	color:white;
 }
 
-div.profile, .note, .utility{
+div.profile{
 	background-color: #ffffff;
 	border-radius: 4px;
 	position:absolute;
@@ -51,17 +51,17 @@ div.profile, .note, .utility{
 	width: 65%;
 	padding:12px;
 }
-
+.heading{
+	text-align:center;
+}
 div.set .active2{
     background-color: #32CD32;
 }
-
-/* profile page*/
 .subprofile{
 	padding-top:1%;
 }
 input[type=text], input[type=password], input[type=email], select {
-    width: 40%;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
@@ -71,6 +71,7 @@ input[type=text], input[type=password], input[type=email], select {
 	bottom:4.5px;
 	position:relative;
 	font-size:20px;
+	text-align:left;
 }
 input[type=text]:focus {
     border: 3px solid #555;
@@ -79,109 +80,40 @@ label{
     display:inline-block;
     width:100px;
 }
-#unitno, #postalcode{
-    width:15%;
-}
-.button2{
-	background-color: #4CAF50;
-	border-radius: 4px;
-	padding:12px;
-	transition: all 0.3s ease 0s;
-	color:white;
-}
-.button2:hover{
-	background-color:#e15a1f;
-	color:white;
-	cursor:pointer;
-}
-.reset{
-	background-color: #ff9800;
-	color:white;
-	border-radius: 4px;
-	padding:12px;
-	transition: all 0.3s ease 0s;
-}
-.reset:hover{
-	background-color:#e15a1f;
-	color:white;
-	cursor:pointer;
-}
-
-.info{
-	font-weight:bold;
-	background-color: #e7f3fe;
-    border-left: 6px solid #2196F3;   
-	padding: 10px 16px;
-
-}
-.alert{
-	text-align: center;
-	padding: 10px;
-	background-color: #79c879;
-	color:#fff;
-	margin-bottom: 10px;
-	display: none;
-}
-
-/* notification page*/
 hr{
 	border: 1px solid black;
     outline-style: solid;
     outline-color: red;
 	width:30%;
 }
-.heading{
-	text-align:center;
-}
-.subnote{
-	font-size:18px;
-    padding-bottom: 3%;
-}
-/* utility page*/
-.mid{
-	list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-.mid li{
-	display: block;
-	text-align:left;
-    float: left;
-}
-.mid img{
-	margin: 0;
-    padding-left:125px;
-}
-.water img, .electricity img{
-	padding-top:15px;
+#changepass{
+	
 }
 
-h2{
-	float:right;
-	font-size:30px;
-	text-align:left;
-}
-.gas h2{
-	padding-right:155px;
-}
-.water h2{
-	padding-right:35px;
-}
-.electricity h2{
-	padding-right:10px;
-}
-.words {
-	font-size:18px;
-	padding-left:150px;
-}
-.usage{
-	font-size:40px;
-	font-weight:bold;
-	color:green;
-}
-.amount{
-	font-size:30px;
-	font-weight:bold;
-	color:green;
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+    color: green;
+	font-size:20px;
+	position: relative;
+    left:15px;
 }
 
+.valid:before {
+    position: relative;
+    left:-5px;
+    content: "✔";
+}
+
+/* Add a red text color and an "x" when the requirements are wrong */
+.invalid {
+    color: red;
+	font-size:20px;
+	position: relative;
+    left:15px;
+}
+
+.invalid:before {
+    position: relative;
+    left:-5px;
+    content: "✖";
+}

@@ -112,10 +112,10 @@ hr{width:auto;}
 }
 
 .x {
-    color: #FF0000;
-    float: left;
+  color: #FF0000;
+  float: left;
 	transition: all 0.4s ease 0s;
-    font-size:22px;
+    font-size:  25.5px;
     font-weight: bold;
 }
 .remove:hover,
