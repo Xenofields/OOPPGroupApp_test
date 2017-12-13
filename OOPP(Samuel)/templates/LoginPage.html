@@ -1,11 +1,10 @@
-	<!DOCTYPE html>
-	<html>
-
-	<link href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway" rel="stylesheet">
-	<link rel="stylesheet" href="../static/css/animate.css">
-    <link rel="stylesheet" href="../static/css/website css.css">
-	<script src="../static/js/signup.js"></script>
-
+<!DOCTYPE html>
+<head>
+<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Poiret+One|Raleway" rel="stylesheet">
+<link rel="stylesheet" href="../static/css/animate.css">
+<link rel="stylesheet" href="../static/css/website css.css">
+</head>
 
 	<body>
 
@@ -21,7 +20,7 @@
 </div>
 	<div id="id01" class="modal" >
 
-	  <form class="modal-content animate" action = "{{ url_for('home') }}">
+	  <form class="modal-content animate">
 		<div class="imgcontainer">
 		  <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
 		  <img src="../static/images/websitelogo.png" alt="Avatar" class="avatar">
@@ -29,13 +28,14 @@
 
 		<div class="container" style="font-family: 'Poiret One', cursive;', sans-serif;">
 		  <label><b>Username</b></label>
-		  <input type="email" placeholder="Enter Username" name="uname" id="txtEmail" required>
+		  <input type="email" placeholder="Enter Username" id="txtEmail">
 
 		  <label><b>Password</b></label>
-		  <input type="password" placeholder="Enter Password" name="psw" id="txtPassword" required>
+		  <input type="password" placeholder="Enter Password" id="txtPassword">
 
-		  <button style="font-family: 'Raleway'; padding-left:30px;padding-right:30px;" id="btnLogin">Login</button>
+		  <button style="font-family: 'Raleway'; padding-left:30px;padding-right:30px;" id="btnLogin" class="btn btn-action">Login</button>
 		  <input type="checkbox" checked="checked"> Remember me
+
 		</div>
 
 		<div class="container" style="background-color:#f1f1f1">
@@ -44,20 +44,9 @@
 		</div>
 	  </form>
 	</div>
-	<p style="text-align:center;font-family: 'Raleway', sans-serif;">Don't have an account? Sign up <span class="signup"><a class="signup" href="Sign Up Page.html">here</a></span>.
-<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyB4sBU2x4k9W5RuNfuuNUMcSyh94t9HT4I",
-    authDomain: "login-page-c70ab.firebaseapp.com",
-    databaseURL: "https://login-page-c70ab.firebaseio.com",
-    projectId: "login-page-c70ab",
-    storageBucket: "login-page-c70ab.appspot.com",
-    messagingSenderId: "46349091083"
-  };
-  firebase.initializeApp(config);
-</script>
+	<p style="text-align:center;font-family: 'Raleway', sans-serif;">Don't have an account? Sign up <span class="signup"><a class="signup" href="SignUpPage.html">here</a></span>.
+	<script src="../static/js/login.js"></script>
+
 	<script>
 	// Get the modal
 	var modal = document.getElementById('id01');
