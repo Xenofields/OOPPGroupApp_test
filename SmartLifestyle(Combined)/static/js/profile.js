@@ -9,7 +9,7 @@ var config = {
   };
 firebase.initializeApp(config);
 
-// Reference message collection
+// Reference profile collection
 var profileRef = firebase.database().ref('profile');
 
 //Listen for form submit
@@ -28,7 +28,7 @@ function submitForm(e){
   var unitno=getInputVal('unitno');
   var postalcode=getInputVal('postalcode');
   
-  //Save message
+  //Save profile
   saveProfile(username, password, email, mobileno, streetname, unitno, postalcode);
 
   //Back to top
@@ -49,7 +49,7 @@ function getInputVal(id){
   return document.getElementById(id).value;
 }
 
-//Save message to firebase
+//Save profile to firebase
 function saveProfile(username, password, email, mobileno, streetname, unitno, postalcode){
   var newProfileRef=profileRef.push();
   newProfileRef.set({
@@ -67,9 +67,12 @@ function saveProfile(username, password, email, mobileno, streetname, unitno, po
 var phonenum=document.getElementById('mobileno');
 phonenum.oninvalid = function(event) {
   event.target.setCustomValidity('Enter a valid phone number!');
-}
+};
 //Validation of postal code
 var pscode=document.getElementById('postalcode');
 pscode.oninvalid = function(event) {
   event.target.setCustomValidity('Enter a valid postal code!');
-}
+};
+
+
+

@@ -39,6 +39,16 @@ function valueChanged3(){
 		$('#manual3').show(500);
 		}	
 }
+function valueChanged4(){	
+	if($('#change4').is(":checked")){
+		$("#auto4").show(500);
+		$("#manual4").hide(500);
+		}
+	else{
+		$("#auto4").hide(500);
+		$('#manual4').show(500);
+		}	
+}
 function home(){
 	window.location.href = "/home"
 }
@@ -60,7 +70,7 @@ function home(){
       <ul>
          <li class='has-sub'><a href='/haze'><span>Haze Warning</span></a>
          </li>
-         <li class='has-sub'><a href='OOPP1.html'><span>Family Bonding</span></a>
+         <li class='has-sub'><a href='/family'><span>Family Bonding</span></a>
          </li>
 		 <li class='has-sub'><a href='/securityfunction'><span>Security</span></a>
          </li>
@@ -124,7 +134,7 @@ function home(){
 				<label for="duration">Duration:
 				<input type="text" id="duration" name="duration"/>
 			</div>
-			<br><br><br>
+			<br><br>
 			<button class="remove">
 			<span class="x">&times;</span>Remove
 			</button>
@@ -159,7 +169,7 @@ function home(){
 			<label for="duration">Duration:
 			<input type="text" id="duration" name="duration">
 		</div>
-		<br><br><br>
+		<br><br>
 		<button class="remove">
 			<span class="x">&times;</span>Remove
 		</button>
@@ -194,7 +204,7 @@ function home(){
 			<label for="duration">Duration:
 			<input type="text" id="duration" name="duration">
 		</div>
-		<br><br><br>
+		<br><br>
 		<button class="remove">
 			<span class="x">&times;</span>Remove
 		</button>
@@ -236,8 +246,6 @@ function home(){
 
 </div>
 <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
-
-
 
 </body>
 </html>

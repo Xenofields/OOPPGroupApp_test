@@ -59,6 +59,10 @@ def securityPage():
 @app.route('/loginpage')
 def loginPage():
     return render_template('LoginPage.html')
+#Bo Zhao's page
+@app.route('/family')
+def familyPage():
+    return render_template('OOPP1.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
