@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<link rel="stylesheet" href="../static/css/changePass.css">
+<link rel="stylesheet" href="../static/css/navbar.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+function home(){
+	window.location.href = "/home"
+}
+</script>
+<title>Smart Lifestyle - My Profile</title>
+</head>
+<body>
+
+<!-- nav bar -->
+<img src="../static/images/websitelogo.png" class="logo" id="logo" onclick="home()"/>
+<div id='cssmenu'>
+<ul>
+
+   <li><a href='/home'><span>HOME</span></a></li>
+   <li class='active has-sub'><a href='/application'><span>APPLICATIONS</span></a>
+      <ul>
+         <li class='has-sub'><a href='Haze.html'><span>Haze Warning</span></a>
+         </li>
+         <li class='has-sub'><a href='OOPP1.html'><span>Family Bonding</span></a>
+         </li>
+		 <li class='has-sub'><a href='Security_Functions.html'><span>Security</span></a>
+         </li>
+		 <li class='has-sub'><a href='/household_chores'><span>Household Chores</span></a>
+         </li>
+      </ul>
+   </li>
+   <li class='active has-sub' id="active"><a href='#'><span>SETTINGS</span></a>
+		<ul>
+			<li class='has-sub'><a href='/myprofile' id="active"><span>My Profile</span></a>
+			</li>
+			<li class='has-sub'><a href='/notifications'><span>Notifications</span></a>
+			</li>
+			<li class='has-sub'><a href='/utility'><span>Utility Charges</span></a>
+			</li>
+		</ul>
+   </li>
+   <li class='last'><a href='#'><span>ABOUT</span></a></li>
+</ul>
+</div>
+
+<div class="set">
+<ul>
+<li><a class="active2" href="/myprofile">My Profile</a></li>
+<li><a href="/notifications">Notifications</a></li>
+<li><a href="/utility">Utility Charges</a></li>
+</ul>
+</div>
+
+<div class="profile">
+<h1 class='heading'>Change Password</h1><hr>
+<div class='subprofile'>
+<form>
+	<label for="oldpass">Old Password:</label>
+    <input type="password" name="oldpass" id="oldpass">
+	
+	<label for="newpsw">New Password:</label>
+    <input type="password" id="newpsw" name="newpsw" pattern=".{8,}" title="Must contain at least 8 or more characters" required />
+	<p id="length" class="invalid">Minimum <b>8 characters</b></p>
+
+<label for="repeatpass">New Password:</label>
+<input type="password" name="repeatpass" id="repeatpass" placeholder="Repeat Password" autocomplete="off" required />
+
+<p id="same" class="invalid"> Passwords Match</p>
+
+<input type="submit" data-loading-text="Changing Password..." id="changepass">
+<input type="button" class="back" value="Back" onclick="back()">
+
+</div>
+</form>
+</div>
+
+<script>
+
+var myInput = document.getElementById('newpsw');
+var repeat=document.getElementById('repeatpass');
+var length = document.getElementById("length");
+var same=document.getElementById('same');
+myInput.onkeyup = function() {
+	// Validate length
+	if(myInput.value.length >= 8) {
+		length.classList.remove("invalid");
+		length.classList.add("valid");
+	}else {
+		length.classList.remove("valid");
+		length.classList.add("invalid");
+	}
+}
+repeat.onkeyup = function() {	
+	if (repeat.value == myInput.value){
+		same.classList.remove("invalid");
+		same.classList.add("valid");
+	}else {
+		same.classList.remove("valid");
+		same.classList.add("invalid");
+	}
+}
+function back(){
+	window.location.href = "/myprofile"
+}
+</script>
+
+</body> 
+</html>

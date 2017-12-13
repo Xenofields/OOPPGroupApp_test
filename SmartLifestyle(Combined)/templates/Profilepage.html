@@ -5,29 +5,38 @@
 
 <link rel="stylesheet" href="../static/css/settings.css">
 <link rel="stylesheet" href="../static/css/navbar.css">
+
+<script>
+function home(){
+	window.location.href = "/home"
+}
+function changepassword(){
+	window.location.href = "/change_password"
+}
+</script>
 <title>Smart Lifestyle - My Profile</title>
 </head>
 <body>
 
 <!-- nav bar -->
-<img src="../static/images/websitelogo.png" class="logo" id="logo"/>
+<img src="../static/images/websitelogo.png" class="logo" id="logo" onclick="home()"/>
 <div id='cssmenu'>
 <ul>
 
    <li><a href='/home'><span>HOME</span></a></li>
    <li class='active has-sub'><a href='/application'><span>APPLICATIONS</span></a>
       <ul>
-         <li class='has-sub'><a href='Haze.html'><span>Haze Warning</span></a>
+         <li class='has-sub'><a href='/haze'><span>Haze Warning</span></a>
          </li>
          <li class='has-sub'><a href='OOPP1.html'><span>Family Bonding</span></a>
          </li>
-		 <li class='has-sub'><a href='Security_Functions.html'><span>Security</span></a>
+		 <li class='has-sub'><a href='/securityfunction'><span>Security</span></a>
          </li>
 		 <li class='has-sub'><a href='/household_chores'><span>Household Chores</span></a>
          </li>
       </ul>
    </li>
-   <li class='active has-sub' id="active"><a href='#'><span>SETTINGS</span></a>
+   <li class='active has-sub'><a href='#' id="active"><span>SETTINGS</span></a>
 		<ul>
 			<li class='has-sub'><a href='/myprofile' id="active"><span>My Profile</span></a>
 			</li>
@@ -56,8 +65,8 @@
     <label for="username">Username:</label>
     <input type="text" name="username" id="username" required><br>
     <label for="password">Password:</label>
-    <input type="password" name="password" id="password" value="PASSWORD" disabled >
-    <input type="button" class="button2" value="Change Password">
+    <input type="password" name="password" id="password" value="PASSWORD" disabled><br>
+    <input type="button" class="button2" value="Change Password" style="position:relative; left:105px;" onclick='changepassword()'>
 
     <p class="info">&#9432; Ensure that you do not give your password out to anyone!</p>
 
@@ -83,7 +92,7 @@
         <p class="info">&#9432; House address is needed in order to display your utility charges!</p>
     </div>
      <br><br>
-    <input type="button" class="button2" value="Save Changes">
+    <input type="submit" class="button2" value="Save Changes">
     <input type="reset" class="reset" value="Revert Changes">
 </div>
 </form>
