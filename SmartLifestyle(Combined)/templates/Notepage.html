@@ -2,9 +2,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
+<link rel="shortcut icon" href="../static/images/websitelogo.png" />
 <link rel="stylesheet" href="../static/css/settings.css">
 <link rel="stylesheet" href="../static/css/navbar.css">
+<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
 <script>
 function home(){
 	window.location.href = "/home"
@@ -62,31 +63,32 @@ function home(){
 		<form>
 			<h3>Haze:</h3>
 			<p>I would like to recieve notifications about any haze functions via: </p>
-			<input type="radio" name="Hazemsg" value="email">My Email<br>
-			<input type="radio" name="Hazemsg" value="phone">Phone(message)<br>
-			<input type="radio" name="Hazemsg" value="no">Disable(no notifications)
+			<input type="radio" name="HazeEmail" id="HazeEmail" value="email">My Email<br>
+			<input type="radio" name="HazeMsg" id="HazeEmail" value="phone">Phone(message)<br>
+			<input type="radio" name="HazeNone" id="HazeEmail" value="no">Disable(no notifications)
 		</form>
 	</div>
 	<div class="security_note">
 		<form>
 			<h3>Security:</h3>
 			<p>I would like to recieve notifications if any suspicious motions is detected via: </p>
-			<input type="radio" name="Hazemsg" value="email">My Email<br>
-			<input type="radio" name="Hazemsg" value="phone">Phone(message)<br>
-			<input type="radio" name="Hazemsg" value="no">Disable(no notifications)
+			<input type="radio" name="SecEmail" id="SecEmail" value="email">My Email<br>
+			<input type="radio" name="SecMsg" id="SecMsg" value="phone">Phone(message)<br>
+			<input type="radio" name="SecNone" id="SecNone" value="no">Disable(no notifications)
 		</form>
 		<form>
 			<p>I would like to recieve notifications if any devices are switched on via: </p>
-			<input type="radio" name="Hazemsg" value="email">My Email<br>
-			<input type="radio" name="Hazemsg" value="phone">Phone(message)<br>
-			<input type="radio" name="Hazemsg" value="no">Disable(no notifications)
+			<input type="radio" name="DeviceEmail" id="DeviceEmail" value="email">My Email<br>
+			<input type="radio" name="DeviceMsg" id="DeviceMsg" value="phone">Phone(message)<br>
+			<input type="radio" name="DeviceNone" id="DeviceNone" value="no">Disable(no notifications)
 		</form>
-        <br><br>
-	</div>
+        </div>
+	<br><br>
     <input type="button" class="button2" value="Save Changes">
     <input type="reset" class="reset" value="Revert Changes">
 </div>
 
 </div>
+<script src="../static/js/notifications.js"></script>
 </body>
 </html>

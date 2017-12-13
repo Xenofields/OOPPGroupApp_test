@@ -2,10 +2,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
+<link rel="shortcut icon" href="../static/images/websitelogo.png" />
 <link rel="stylesheet" href="../static/css/settings.css">
 <link rel="stylesheet" href="../static/css/navbar.css">
-
+<script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
 <script>
 function home(){
 	window.location.href = "/home"
@@ -60,10 +60,10 @@ function changepassword(){
 
 <div class="profile">
 <h1 class='heading'>My Profile</h1><hr>
-<form>
+<form id='profileForm'>
 <div class='subprofile'>
     <label for="username">Username:</label>
-    <input type="text" name="username" id="username" required><br>
+    <input type="text" name="username" id="username" value="User" required><br>
     <label for="password">Password:</label>
     <input type="password" name="password" id="password" value="PASSWORD" disabled><br>
     <input type="button" class="button2" value="Change Password" style="position:relative; left:105px;" onclick='changepassword()'>
@@ -99,18 +99,9 @@ function changepassword(){
 </div>
 
 <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyB4sBU2x4k9W5RuNfuuNUMcSyh94t9HT4I",
-    authDomain: "login-page-c70ab.firebaseapp.com",
-    databaseURL: "https://login-page-c70ab.firebaseio.com",
-    projectId: "login-page-c70ab",
-    storageBucket: "login-page-c70ab.appspot.com",
-    messagingSenderId: "46349091083"
-  };
-  firebase.initializeApp(config);
-</script>
+
+<script src="../static/js/profile.js"></script>
+
 
 </body> 
 </html>
