@@ -54,7 +54,7 @@ def signupPage():
 
 @app.route('/securityfunction')
 def securityPage():
-    return render_template('Security Functions.html')
+    return render_template('SecurityFunc.html')
 
 @app.route('/loginpage')
 def loginPage():
