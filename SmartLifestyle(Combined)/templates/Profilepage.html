@@ -60,6 +60,7 @@ function changepassword(){
 
 <div class="profile">
 <h1 class='heading'>My Profile</h1><hr>
+<div class="alert">Your profile has been updated!</div>
 <form id='profileForm'>
 <div class='subprofile'>
     <label for="username">Username:</label>
@@ -76,7 +77,7 @@ function changepassword(){
     <p class="info">&#9432; Please ensure that this is your current email as notifications will be sent to it!</p>
 
     <label for="mobileno">Mobile Number:</label>
-    <input type="text" name="mobileno" id="mobileno" required>
+    <input type="text" name="mobileno" id="mobileno" pattern="^\d{8}" placeholder="Format: xxxxxxxx" required>
 
     <p class="info">&#9432; Please ensure that this is your current phone number as notifications will be sent to it!</p>
 
@@ -87,7 +88,7 @@ function changepassword(){
     <label for="unitno">Unit Number:</label>
     <input type="text" name="unitno" id="unitno" required>
     <label for="postalcode">Postal Code:</label>
-    <input type="text" name="postalcode" id="postalcode" required>
+    <input type="text" name="postalcode" id="postalcode" pattern="^\d{6}" required>
     <div class="infobox">
         <p class="info">&#9432; House address is needed in order to display your utility charges!</p>
     </div>
