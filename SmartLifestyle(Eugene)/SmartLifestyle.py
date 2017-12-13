@@ -23,6 +23,7 @@ def notePage():
 @app.route('/household_chores')
 def choresPage():
     return render_template('Chores.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
 

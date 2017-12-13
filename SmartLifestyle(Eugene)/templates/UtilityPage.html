@@ -5,6 +5,7 @@
 
 <link rel="stylesheet" href="../static/css/settings.css">
 <link rel="stylesheet" href="../static/css/navbar.css">
+<script src="../static/js/utility.js"></script>
 
 <title>Smart Lifestyle - My Profile</title>
 </head>
@@ -58,10 +59,10 @@
 		<h2>Electricity</h2>
 			<ul class="words">
 			<li>
-				<p>You have used<br><span class='usage'>100kWh</span><br>of electricity this month
+				<p>You have used<br><span class='usage' id='electricity'>0kWh</span><br>of electricity this month
 				</p>
 				<p>This month's<br>Electricity Tariffs:<br><span class='amount'>$0.203/kWh</span></p>
-				<p>Total electricity bill:<br><span class='amount'>$20.30</span>
+				<p>Total electricity bill:<br><span class='amount' id="totalelecbill">$0.00</span>
 			</li>
 			</ul>
 		</li>
@@ -69,14 +70,14 @@
 		<h2>Water</h2>
 			<ul class="words">
 			<li>
-				<p>You have used<br><span class='usage'>20m<sup>3</sup></span><br>of water this month
+				<p>You have used<br><span class='usage' id='water'>0m<sup>3</sup></span><br>of water this month
 				</p>
 				<p>This month's<br>Water Tariffs:<br>
 				<span class='amount'>$2.39/m<sup>3</sup></span>
 				<br>for 0-40m<sup>3</sup></p><p>
 				<span class='amount'>$3.21/m<sup>3</sup></span>
 				<br>for >40m<sup>3</sup></p>
-				<p>Total water bill:<br><span class='amount'>$47.80</span>
+				<p>Total water bill:<br><span class='amount' id="totalwaterbill">$47.80</span>
 			</li>
 			</ul>
 		</li>
@@ -84,10 +85,10 @@
 		<h2>Gas</h2>
 			<ul class="words">
 			<li>
-				<p>You have used<br><span class='usage'>50kWh</span><br>of gas this month
+				<p>You have used<br><span class='usage' id='gas'>0kWh</span><br>of gas this month
 				</p>
-				<p>This month's<br>Electricity Tariffs:<br><span class='amount'>$0.1768/kWh</span></p>
-				<p>Total electricity bill:<br><span class='amount'>$8.84</span></p>
+				<p>This month's<br>Gas Tariffs:<br><span class='amount'>$0.1768/kWh</span></p>
+				<p>Total gas bill:<br><span class='amount' id="totalgasbill">$0.00</span></p>
 			</li>
 			</ul>
 		</li>
