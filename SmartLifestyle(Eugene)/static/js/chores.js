@@ -24,7 +24,7 @@ window.onload = function(){
 		$("#auto3").hide();
 		$('#manual3').show();
 	}
-
+	
 		// Get the modal
 	var modal = document.getElementById('myModal');
 
@@ -111,8 +111,8 @@ function addDevice(){
 	label.className='switch';
 	var slider=document.createElement('input');
 	slider.setAttribute('type', 'checkbox');
-	slider.setAttribute('id','change');
-	slider.setAttribute('onchange','valueChanged()');
+	slider.setAttribute('id','change4');
+	slider.setAttribute('onchange','valueChanged4()');
 	var sliderspan=document.createElement('span');
 	sliderspan.className='slider round';
 	label.appendChild(slider);
@@ -127,7 +127,7 @@ function addDevice(){
 			
 	//maunal
 	var manual=document.createElement('div');
-	manual.setAttribute('id', 'manual');
+	manual.setAttribute('id', 'manual4');
 	var para = document.createElement('p');
 	var manspan=document.createElement('span');
 	manspan.className='onOff';
@@ -153,7 +153,7 @@ function addDevice(){
 			
 	//auto
 	var auto=document.createElement("div");
-	auto.setAttribute('id','auto');
+	auto.setAttribute('id','auto4');
 	var starttime=document.createElement('label');
 	starttime.setAttribute('for','timestart');
 	starttime.innerHTML="Start Time";
@@ -174,16 +174,43 @@ function addDevice(){
 	duration.appendChild(dur);
 	auto.appendChild(starttime);
 	auto.appendChild(duration);
-			
+
+	//Remove button
+	var remove = document.createElement('button');
+	remove.className='remove';
+	remove.innerHTML='Remove';
+	var removespan=document.createElement('span')
+	removespan.className='x';
+	removespan.innerHTML= '&times;';
+	remove.appendChild(removespan);
+	
+		
 	div.appendChild(manAuto);
 	div.appendChild(manual);
 	div.appendChild(auto);
+	var br1 = document.createElement('br');
+	div.appendChild(br1);
+	var br2 = document.createElement('br');
+	div.appendChild(br2);
+	div.appendChild(remove);
 	var piclist=document.createElement("li");
 	piclist.appendChild(div);
 	insertpic.appendChild(piclist);
 	page.appendChild(insertpic);
 	modal.style.display = "none";
+
+	if($('#change4').is(":checked")){
+		$("#auto4").show();
+		$("#manual4").hide();
+	}
+	else{
+		$("#auto4").hide();
+		$('#manual4').show();
+	}
 }
+
+//firebase
+
 
 
 
