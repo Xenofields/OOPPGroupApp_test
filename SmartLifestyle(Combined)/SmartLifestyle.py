@@ -1,4 +1,7 @@
 from flask import Flask, render_template, request
+from wtforms import Form, StringField, RadioField, SelectField,PasswordField,\
+    SubmitField, validators, ValidationError
+
 
 app = Flask(__name__)
 
@@ -14,15 +17,34 @@ def appPage():
 @app.route('/utility')
 def utilityPage():
     return render_template('UtilityPage.html')
+
+class test(Form):
+    username=StringField("Username:",[validators.DataRequired("Please enter a username")])
+    password=PasswordField("Password:")
+    email=StringField("E-mail:",[validators.Email('Please enter your email address!')])
+    mobileno=StringField('Mobile Number:')
+    streetname=StringField('Street Name:')
+    unitno=StringField('Unit Number:')
+    postalcode=StringField('Postal Code:')
+    savechanges=SubmitField('Save Changes')
+
+@app.route('/test', methods = ['GET', 'POST'])
+def contact():
+    form = test(request.form)
+    return render_template('test.html', form = form)
+
 @app.route('/myprofile')
 def profilePage():
     return render_template('Profilepage.html')
+
 @app.route('/notifications')
 def notePage():
     return render_template('Notepage.html')
+
 @app.route('/household_chores')
 def choresPage():
     return render_template('Chores.html')
+
 @app.route('/change_password')
 def changePass():
     return render_template('ChangePass.html')
@@ -59,10 +81,12 @@ def securityPage():
 @app.route('/loginpage')
 def loginPage():
     return render_template('LoginPage.html')
+
 #Bo Zhao's page
 @app.route('/family')
 def familyPage():
     return render_template('OOPP1.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True)
