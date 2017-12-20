@@ -1,13 +1,14 @@
 <!doctype html>
 <html>
    <body>
+
     <form action = "" method = POST>
 
-        {{form.username.label }}
+        {{form.username.label}}
         {{form.username}}
 
         {{form.password.label }}
-        {{form.password }}
+        {{form.password(readonly=true) }}
 
         {{form.email.label }}
         {{form.email }}

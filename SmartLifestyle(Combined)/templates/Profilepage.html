@@ -61,18 +61,19 @@ function changepassword(){
 <div class="profile">
 <h1 class='heading'>My Profile</h1><hr>
 <div class="alert">Your profile has been updated!</div>
-<form id='profileForm'>
+<form id='profileForm' action = "" method = POST>
 <div class='subprofile'>
-    <label for="username">Username:</label>
-    <input type="text" name="username" id="username" value="User" required><br>
-    <label for="password">Password:</label>
-    <input type="password" name="password" id="password" value="PASSWORD" disabled><br>
+    {{form.username.label}}
+    {{form.username}}<br>
+
+    {{form.password.label }}
+    {{form.password(readonly=true) }}<br>
     <input type="button" class="button2" value="Change Password" style="position:relative; left:105px;" onclick='changepassword()'>
 
     <p class="info">&#9432; Ensure that you do not give your password out to anyone!</p>
 
-    <label for="email">E-mail:</label>
-    <input type="email" name="email" id="email" required>
+    {{form.email.label }}
+        {{form.email }}
 
     <p class="info">&#9432; Please ensure that this is your current email as notifications will be sent to it!</p>
 
@@ -82,11 +83,11 @@ function changepassword(){
     <p class="info">&#9432; Please ensure that this is your current phone number as notifications will be sent to it!</p>
 
     <h3>House Address</h3>
-    <label for="streetname">Street Name:</label>
-    <input type="text" name="streetname" id="streetname" required>
+    {{form.streetname.label }}
+    {{form.streetname }}
 	<br>
-    <label for="unitno">Unit Number:</label>
-    <input type="text" name="unitno" id="unitno" required>
+    {{form.unitno.label }}
+    {{form.unitno }}
     <label for="postalcode">Postal Code:</label>
     <input type="text" name="postalcode" id="postalcode" pattern="^\d{6}" required>
     <div class="infobox">

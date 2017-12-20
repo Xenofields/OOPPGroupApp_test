@@ -19,13 +19,14 @@ def utilityPage():
     return render_template('UtilityPage.html')
 
 class test(Form):
-    username=StringField("Username:",[validators.DataRequired("Please enter a username")])
+    username=StringField("Username:",[validators.DataRequired("Please enter a username!")],default="User")
     password=PasswordField("Password:")
-    email=StringField("E-mail:",[validators.Email('Please enter your email address!')])
-    mobileno=StringField('Mobile Number:')
-    streetname=StringField('Street Name:')
-    unitno=StringField('Unit Number:')
-    postalcode=StringField('Postal Code:')
+    email=StringField("E-mail:",[validators.Email('Please enter your email address!'),
+                                 validators.DataRequired("Please enter your email address!")])
+    mobileno=StringField('Mobile Number:',[validators.DataRequired("Please enter a valid mobile number!")])
+    streetname=StringField('Street Name:',[validators.DataRequired("Please enter your street name!")])
+    unitno=StringField('Unit Number:',[validators.DataRequired("Please enter your unit number!")])
+    postalcode=StringField('Postal Code:',[validators.DataRequired("Please enter your postal code!")])
     savechanges=SubmitField('Save Changes')
 
 @app.route('/test', methods = ['GET', 'POST'])
@@ -33,9 +34,20 @@ def contact():
     form = test(request.form)
     return render_template('test.html', form = form)
 
-@app.route('/myprofile')
+class profile(Form):
+    username = StringField("Username:", [validators.DataRequired("Please enter a username!")], default="User")
+    password = PasswordField("Password:", default="PASSWORD")
+    email = StringField("E-mail:", [validators.Email('Please enter your email address!'),
+                                    validators.DataRequired("Please enter your email address!")])
+    mobileno = StringField('Mobile Number:', [validators.DataRequired("Please enter a valid mobile number!")])
+    streetname = StringField('Street Name:', [validators.DataRequired("Please enter your street name!")])
+    unitno = StringField('Unit Number:', [validators.DataRequired("Please enter your unit number!")])
+    postalcode = StringField('Postal Code:', [validators.DataRequired("Please enter your postal code!")])
+
+@app.route('/myprofile', methods = ['GET', 'POST'])
 def profilePage():
-    return render_template('Profilepage.html')
+    form = profile(request.form)
+    return render_template('Profilepage.html', form = form)
 
 @app.route('/notifications')
 def notePage():
