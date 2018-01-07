@@ -130,9 +130,9 @@ function home(){
 			</div>
 			<div id="auto1">
 				<label for="timestart">Start Time:
-				<input type="text" id="timestart" name="start"><br>
+				<input type="time" id="timestart" name="start" value="15:30"><br>
 				<label for="duration">Duration:
-				<input type="text" id="duration" name="duration"/>
+				<input type="number" id="duration" name="duration" min="0" max="59" value="30" style="width:10%;"/> minutes
 			</div>
 			<br><br>
 			<button class="remove">
@@ -165,9 +165,9 @@ function home(){
 		</div>
 		<div id="auto2">
 			<label for="timestart">Start Time:
-			<input type="text" id="start" name="start"><br>
+			<input type="time" id="start" name="start" value="15:30"><br>
 			<label for="duration">Duration:
-			<input type="text" id="duration" name="duration">
+			<input type="number" id="duration" name="duration" min="0" max="59" value="30" style="width:10%;"/> minutes
 		</div>
 		<br><br>
 		<button class="remove">
@@ -200,9 +200,9 @@ function home(){
 		</div>
 		<div id="auto3">
 			<label for="timestart">Start Time:
-			<input type="text" id="start" name="start"><br>
+			<input type="time" id="start" name="start" value="15:30"><br>
 			<label for="duration">Duration:
-			<input type="text" id="duration" name="duration">
+				<input type="number" id="duration" name="duration" min="0" max="59" value="30" style="width:10%;"/> minutes
 		</div>
 		<br><br>
 		<button class="remove">
@@ -246,6 +246,7 @@ function home(){
 
 </div>
 <script src="https://www.gstatic.com/firebasejs/4.8.0/firebase.js"></script>
+
 
 </body>
 </html>
